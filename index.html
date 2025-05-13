@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Uygulaması</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="animated-bg"></div>
+    <div class="app-header">
+        <h1>☀️ Weatherly</h1>
+        <p>Şehrinizin anlık ve haftalık hava durumu</p>
+    </div>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Şehir adı girin..." id="search-input">
+            <button id="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+            <button id="location-button" title="Konumumu Bul">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+        </div>
+
+        <div class="unit-toggle">
+            <button id="celsius" class="active">°C</button>
+            <button id="fahrenheit">°F</button>
+        </div>
+
+        <div class="weather-box horizontal-box">
+            <div class="weather-left">
+                <div class="weather-anim-icon" id="weather-anim-icon"></div>
+                <div class="temperature">
+                    <span id="temp">--</span><span class="unit">°C</span>
+                </div>
+                <div class="description" id="description">--</div>
+            </div>
+            <div class="weather-right">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="city">--</span>
+                    <button id="favorite-btn" title="Favorilere Ekle">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="weather-info">
+                    <div class="info-item">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind">-- km/s</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-compress-alt"></i>
+                        <span id="pressure">-- hPa</span>
+                    </div>
+                </div>
+                <div class="hourly-forecast">
+                    <h3>Saatlik Tahmin</h3>
+                    <div class="hourly-container" id="hourly-container">
+
+                    </div>
+                </div>
+                <div class="daily-forecast">
+                    <h3>5 Günlük Tahmin</h3>
+                    <div class="daily-container" id="daily-container">
+                        <!-- Günlük tahminler JavaScript ile eklenecek -->
+                    </div>
+                </div>
+                <div class="favorites-section">
+                    <h3>Favori Şehirler</h3>
+                    <div class="favorites-container" id="favorites-container">
+                        <!-- Favori şehirler JavaScript ile eklenecek -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
